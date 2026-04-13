@@ -55,7 +55,7 @@ const Testimonials = () => {
     <section id="testimonials" className="bg-[#04071D] py-24 md:py-32">
       <div className="max-w-6xl mx-auto px-8 sm:px-12 lg:px-16">
         {/* Section Heading */}
-        <div className="max-w-3xl mx-auto text-center mb-16">
+        <div data-reveal className="max-w-3xl mx-auto text-center mb-16">
           <p className="text-[#CBACF9] text-sm font-medium tracking-widest uppercase mb-4">
             Testimonials
           </p>
@@ -68,6 +68,7 @@ const Testimonials = () => {
         </div>
 
         {/* Testimonials Carousel */}
+        <div data-reveal="scale" data-reveal-delay="120">
         <Swiper
           grabCursor={true}
           centeredSlides={false}
@@ -138,6 +139,7 @@ const Testimonials = () => {
             </SwiperSlide>
           ))}
         </Swiper>
+        </div>
       </div>
     </section>
   );

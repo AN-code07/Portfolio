@@ -48,7 +48,7 @@ const About = () => {
     <section id="about" className="bg-[#000319] py-24 md:py-32">
       <div className="max-w-6xl mx-auto px-8 sm:px-12 lg:px-16">
         {/* Section Header */}
-        <div className="max-w-3xl mx-auto text-center mb-16">
+        <div data-reveal className="max-w-3xl mx-auto text-center mb-16">
           <p className="text-[#CBACF9] text-sm font-medium tracking-widest uppercase mb-4">
             About Me
           </p>
@@ -66,7 +66,7 @@ const About = () => {
         {/* Main Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
           {/* Image Card */}
-          <div className="relative group h-72 sm:h-80 lg:h-full min-h-[320px] rounded-2xl overflow-hidden border border-[#141b4e]">
+          <div data-reveal="left" className="relative group h-72 sm:h-80 lg:h-full min-h-[320px] rounded-2xl overflow-hidden border border-[#141b4e]">
             <Image
               src={laptop}
               alt="Developer workspace setup"
@@ -99,8 +99,9 @@ const About = () => {
               return (
                 <div
                   key={item.title}
+                  data-reveal="right"
+                  data-reveal-delay={idx * 120}
                   className="flex items-start gap-4 p-5 bg-[#0C0E23] rounded-2xl border border-[#141b4e] hover:border-[#CBACF9]/20 transition-all duration-300 group hover:-translate-y-0.5"
-                  style={{ animationDelay: `${idx * 100}ms` }}
                 >
                   <div className={`w-12 h-12 flex-shrink-0 bg-gradient-to-br ${item.color} rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
                     <Icon className="text-[#CBACF9] text-lg" />
@@ -120,7 +121,7 @@ const About = () => {
         {/* Bottom Row */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {/* Coding Image Card */}
-          <div className="relative group h-56 sm:h-64 rounded-2xl overflow-hidden border border-[#141b4e]">
+          <div data-reveal className="relative group h-56 sm:h-64 rounded-2xl overflow-hidden border border-[#141b4e]">
             <Image
               src={coding}
               alt="Code on a screen"
@@ -144,7 +145,7 @@ const About = () => {
           </div>
 
           {/* Journey Timeline */}
-          <div className="p-6 bg-[#0C0E23] rounded-2xl border border-[#141b4e]">
+          <div data-reveal data-reveal-delay="120" className="p-6 bg-[#0C0E23] rounded-2xl border border-[#141b4e]">
             <h4 className="text-sm font-medium text-gray-500 uppercase tracking-widest mb-5">My Journey</h4>
             <div className="space-y-4">
               {journey.map((item, i) => (
@@ -164,7 +165,7 @@ const About = () => {
           </div>
 
           {/* CTA Card */}
-          <div className="flex flex-col items-center justify-center gap-5 p-8 bg-gradient-to-br from-[#0C0E23] to-[#111a36] rounded-2xl border border-[#141b4e] sm:col-span-2 lg:col-span-1">
+          <div data-reveal data-reveal-delay="240" className="flex flex-col items-center justify-center gap-5 p-8 bg-gradient-to-br from-[#0C0E23] to-[#111a36] rounded-2xl border border-[#141b4e] sm:col-span-2 lg:col-span-1">
             <div className="w-14 h-14 bg-gradient-to-br from-[#CBACF9]/20 to-[#8A6CF4]/20 rounded-2xl flex items-center justify-center">
               <span className="text-2xl">🤝</span>
             </div>

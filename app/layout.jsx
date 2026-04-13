@@ -1,4 +1,6 @@
 import "./globals.css";
+import Loader from "@/components/layout/Loader";
+import ScrollReveal from "@/components/layout/ScrollReveal";
 
 export const metadata = {
   metadataBase: new URL("https://allahnawaz.dev"),
@@ -54,6 +56,8 @@ export default function RootLayout({ children }) {
         >
           Skip to main content
         </a>
+        <Loader />
+        <ScrollReveal />
         {children}
       </body>
     </html>

@@ -147,7 +147,7 @@ const Projects = () => {
     <section id="projects" className="bg-[#000319] py-24 md:py-32">
       <div className="max-w-6xl mx-auto px-8 sm:px-12 lg:px-16">
         {/* Section Heading */}
-        <div className="max-w-3xl mx-auto text-center mb-12">
+        <div data-reveal className="max-w-3xl mx-auto text-center mb-12">
           <p className="text-[#CBACF9] text-sm font-medium tracking-widest uppercase mb-4">
             Portfolio
           </p>
@@ -162,7 +162,7 @@ const Projects = () => {
         </div>
 
         {/* Filter Tabs */}
-        <div className="flex justify-center gap-2 mb-14 flex-wrap">
+        <div data-reveal data-reveal-delay="120" className="flex justify-center gap-2 mb-14 flex-wrap">
           {filters.map((filter) => (
             <button
               key={filter}
@@ -183,6 +183,8 @@ const Projects = () => {
           {filtered.map((project, idx) => (
             <div
               key={project.id}
+              data-reveal
+              data-reveal-delay={(idx % 3) * 120}
               className="group relative"
               onMouseEnter={() => setHoveredId(project.id)}
               onMouseLeave={() => setHoveredId(null)}

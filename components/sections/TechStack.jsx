@@ -94,7 +94,7 @@ const TechStack = () => {
     <section id="expertise" className="bg-[#04071D] py-24 md:py-32">
       <div className="max-w-6xl mx-auto px-8 sm:px-12 lg:px-16">
         {/* Section Header */}
-        <div className="max-w-3xl mx-auto text-center mb-16">
+        <div data-reveal className="max-w-3xl mx-auto text-center mb-16">
           <p className="text-[#CBACF9] text-sm font-medium tracking-widest uppercase mb-4">
             Tech Stack
           </p>
@@ -110,7 +110,7 @@ const TechStack = () => {
         {/* Categories */}
         <div className="space-y-14">
           {categories.map((category) => (
-            <div key={category.title}>
+            <div key={category.title} data-reveal>
               <div className="flex items-center gap-3 mb-6">
                 <div
                   className={`w-1 h-6 rounded-full bg-gradient-to-b ${category.accent}`}
@@ -124,11 +124,13 @@ const TechStack = () => {
                 </span>
               </div>
               <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
-                {category.techs.map((tech) => {
+                {category.techs.map((tech, idx) => {
                   const Icon = tech.icon;
                   return (
                     <div
                       key={tech.name}
+                      data-reveal="scale"
+                      data-reveal-delay={Math.min(idx * 60, 420)}
                       className="group flex flex-col items-center justify-center gap-3 p-6 bg-[#0C0E23] rounded-2xl border border-[#141b4e] hover:border-[#CBACF9]/20 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-[#CBACF9]/5 relative"
                     >
                       <Icon
