@@ -8,7 +8,7 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   const socialLinks = [
-    { icon: FaGithub, href: "https://github.com/allah-nawaz", label: "GitHub" },
+    { icon: FaGithub, href: "https://github.com/AN-code07", label: "GitHub" },
     { icon: FaLinkedin, href: "https://linkedin.com/in/allah-nawaz-mern", label: "LinkedIn" },
     { icon: FaEnvelope, href: "mailto:nawaz51412@gmail.com", label: "Email" },
   ];

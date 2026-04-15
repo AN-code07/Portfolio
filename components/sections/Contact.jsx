@@ -62,7 +62,7 @@ const Contact = () => {
   ];
 
   const socialLinks = [
-    { icon: FaGithub, href: "https://github.com/allah-nawaz", label: "GitHub" },
+    { icon: FaGithub, href: "https://github.com/AN-code07", label: "GitHub" },
     { icon: FaLinkedin, href: "https://linkedin.com/in/allah-nawaz-mern", label: "LinkedIn" },
   ];
 
